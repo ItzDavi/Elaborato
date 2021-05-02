@@ -3,84 +3,87 @@
   <head>
     <meta charset="utf-8">
     <title>GSH - Gaming Server Hosting</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome/css/all.css">
   </head>
   <body>
-    <div class="bg-dark text-white">
-      <nav class="navbar flex py-3">
-        <a href="#" class="text-start text-white"><i class="fas fa-home pr-2"></i>Home</a>
-        <a href="#" class="text-end text-white"><i class="fas fa-user-circle pr-2"></i>Login</a>
-      </nav>
+    <div id="bgvideo-div mb-0">
+        <video id="bgvideo" playsinline autoplay muted loop src="assets/videos/neon.mp4"></video>
+      <div class="navbar">
+        <!-- TODO:  -->
+      </div>
+
+      <div class="container-fluid text-white" id="video-text">
+        <h1 id="h1-text" class="mt-5 pt-5">Gaming Server Hosting</h1>
+        <h5 id ="h5-text" class="pb-5 pt-3">Secure, Fast, Easy</h5>
+      </div>
     </div>
 
-    <div class="container-fluid text-center pt-3 pb-5 bg-light">
-      <h1 class="mt-5 pt-5">Gaming Server Hosting</h1>
-      <h5 class="pb-5 pt-3">Secure, Fast, Easy</h5>
-    </div>
+    <div class="why">
+      <div class="container-fluid text-center py-4 w-100 mt-0">
+        <h1 class="pb-5">Why gamers choose us ?</h1>
+        <div class="row pt-3">
+          <div class="col">
+            <h4 class="pb-3">Support 24/7</h4>
+            <i class="fas fa-headset fa-3x pb-2 mt-2"></i>
+            <ul class="list-unstyled mt-4">
+              <li class="py-2">Phone and Email Support 24/7</li>
+              <li class="py-2">Help Center Support 24/7</li>
+              <li class="py-2">15+ languages supported</li>
+            </ul>
+          </div>
 
-    <div class="container-fluid text-center py-4 bg-light">
-      <h1>Why gamers choose us ?</h1>
-      <div class="row mt-4 pt-4">
-        <div class="col">
-          <h4 class="pb-3">Support 24/7</h4>
-          <i class="fas fa-headset fa-3x pb-2 mt-2"></i>
-          <ul class="list-unstyled mt-4">
-            <li class="py-2">Phone and Email Support 24/7</li>
-            <li class="py-2">Help Center Support 24/7</li>
-            <li class="py-2">15+ languages supported</li>
-          </ul>
-        </div>
+          <div class="col">
+            <h4 class="pb-3">Performances</h4>
+            <i class="fas fa-fighter-jet fa-3x pb-2 mt-2"></i>
+            <ul class="list-unstyled mt-4">
+              <li class="py-2">Intel and AMD Cpus</li>
+              <li class="py-2">We use only SSD for storage</li>
+              <li class="py-2">Unlimited Gigabit Bandwidth</li>
+            </ul>
+          </div>
 
-        <div class="col">
-          <h4 class="pb-3">Performances</h4>
-          <i class="fas fa-fighter-jet fa-3x pb-2 mt-2"></i>
-          <ul class="list-unstyled mt-4">
-            <li class="py-2">Intel and AMD Cpus</li>
-            <li class="py-2">We use only SSD for storage</li>
-            <li class="py-2">Unlimited Gigabit Bandwidth</li>
-          </ul>
-        </div>
+          <div class="col">
+            <h4 class="pb-3">Secure</h4>
+            <i class="fas fa-key fa-3x pb-2 mt-2"></i>
+            <ul class="list-unstyled mt-4">
+              <li class="py-2">All servers run on our VPS</li>
+              <li class="py-2">Databases are encrypted</li>
+              <li class="py-2">Anti-DDos Protection 24/7</li>
+            </ul>
+          </div>
 
-        <div class="col">
-          <h4 class="pb-3">Secure</h4>
-          <i class="fas fa-key fa-3x pb-2 mt-2"></i>
-          <ul class="list-unstyled mt-4">
-            <li class="py-2">All servers run on our VPS</li>
-            <li class="py-2">Databases are encrypted</li>
-            <li class="py-2">Anti-DDos Protection 24/7</li>
-          </ul>
-        </div>
+          <div class="col">
+            <h4 class="pb-3">Games</h4>
+            <i class="fas fa-hat-wizard fa-3x pb-2 mt-2"></i>
+            <ul class="list-unstyled mt-4">
+              <li class="py-2">Lots of games supported</li>
+              <li class="py-2">Constantly updated</li>
+              <li class="py-2">Optimized Gaming Hardware</li>
+            </ul>
+          </div>
 
-        <div class="col">
-          <h4 class="pb-3">Games</h4>
-          <i class="fas fa-hat-wizard fa-3x pb-2 mt-2"></i>
-          <ul class="list-unstyled mt-4">
-            <li class="py-2">Lots of games supported</li>
-            <li class="py-2">Constantly updated</li>
-            <li class="py-2">Optimized Gaming Hardware</li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <h4 class="pb-3">User Friendly</h4>
-          <i class="fas fa-smile fa-3x pb-2 mt-2"></i>
-          <ul class="list-unstyled mt-4">
-            <li class="py-2">Easy-to-use Dashboard</li>
-            <li class="py-2">Multiple admins support</li>
-            <li class="py-2">Easily backup, import and export files</li>
-          </ul>
+          <div class="col">
+            <h4 class="pb-3">User Friendly</h4>
+            <i class="fas fa-smile fa-3x pb-2 mt-2"></i>
+            <ul class="list-unstyled mt-4">
+              <li class="py-2">Easy-to-use Dashboard</li>
+              <li class="py-2">Multiple admins support</li>
+              <li class="py-2">Easily backup, import and export files</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-      <div class="display text-center mx-5 px-5 pt-5 border-top">
+      <div class="display text-center mx- px-5 pt-5 border-top">
         <h2 class="text-center">Our Plans</h2>
       </div>
 
       <div class="container text-center pt-5 mt-3 mb-5">
         <div class="row">
-          <div class="col pr-4">
+          <div class="col pr-4 pt-2">
             <div class="card">
               <div class="card-header">
                 <h4 class="">Free</h4>
@@ -101,7 +104,7 @@
             </div>
           </div>
 
-          <div class="col pr-4 pl-4">
+          <div class="col pr-4 pl-4 pt-2">
             <div class="card">
               <div class="card-header">
                 <h4 class="">Premium</h4>
@@ -122,7 +125,7 @@
             </div>
           </div>
 
-        <div class="col pr-4 pl-4">
+        <div class="col pr-4 pl-4 pt-2">
           <div class="card">
             <div class="card-header">
               <h4 class="">Pro</h4>
@@ -143,7 +146,7 @@
           </div>
         </div>
 
-        <div class="col pl-4">
+        <div class="col pl-4 pt-2">
           <div class="card">
             <div class="card-header">
               <h4 class="">Enterprise</h4>
@@ -185,7 +188,7 @@
             <li class="py-3">Create private matches</li>
             <li class="py-3">PlayGround and Story availables</li>
             <li class="py-3">Always updated at latest version</li>
-            <li class="py-3">100% Lag Free experience</li>
+            <li class="py-3">100% Lag-Free experience</li>
             <li class="py-3">Dedicated hardware</li>
             <li class="py-3">Anti-Hack system</li>
           </ul>
@@ -199,7 +202,7 @@
             <li class="py-3">Play instantly with your friends</li>
             <li class="py-3">Create private server</li>
             <li class="py-3">Build everything you want</li>
-            <li class="py-3">All versions are supported</li>
+            <li class="py-3">Choose the version you like more</li>
             <li class="py-3">100% Lag-Free experience</li>
             <li class="py-3">Vanilla, Mods, Bukkit and Forge availables</li>
             <li class="py-3">Anti-Hack and X-Ray system</li>
@@ -215,24 +218,14 @@
           <ul class="list-unstyled text-center">
             <li class="py-3">Play instantly with your friends</li>
             <li class="py-3">Create private server</li>
-            <li class="py-3">Build everything you want</li>
-            <li class="py-3">All versions are supported</li>
+            <li class="py-3">Do everything you want</li>
+            <li class="py-3">Always updated at latest version</li>
             <li class="py-3">100% Lag-Free experience</li>
             <li class="py-3">Mods availables</li>
             <li class="py-3">Anti-Cheat system</li>
           </ul>
 
         </div>
-      </div>
-
-      <div class="row">
-
-      </div>
-    </div>
-
-    <div class="bg-dark text-white">
-      <div class="footer bg-dark text-white py-2 px-2">
-        <a href="#" class="text-start text-white"><i class="fab fa-github fa-2x"></i></a>
       </div>
     </div>
 
