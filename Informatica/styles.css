@@ -1,4 +1,4 @@
-#bgvideo-div {
+#bgvideo-start-div {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-#bgvideo {
+#bgvideo-start {
   width: 100%;
 }
 
@@ -24,8 +24,33 @@
 
 #navbar {
   position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #home-link {
   font-family: "Lucida Console";
 }
+
+/*#plans {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: block;
+  position: relative;
+}
+
+#bgvideo-plans {
+  width: 100%;
+}
+
+#plans-container {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}*/
