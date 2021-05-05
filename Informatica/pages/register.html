@@ -8,44 +8,67 @@
     <link rel="stylesheet" href="../fontawesome/css/all.css">
   </head>
   <body class="bg-dark">
-    <div class="container-fluid pt-2">
-      <a class="navbar-item text-start" href="../index.html"><i class="fas fa-home fa-2x text-white"></i></a>
-      <a class="navbar-item text-end" href="#"><i class="fas fa-user fa-2x text-white"></i></a>
-    </div>
+    <div class="container justify-content-center rounded border mt-5 bg-light">
+      <h1 class="text-center py-3">Sign Up</h1>
 
-    <div class="container-fluid justify-content-center rounded w-50 border mt-5 bg-light">
-      <div class="form">
-        <div class="text-center pt-3 pb-4">
-          <h1>Welcome</h1>
+      <div class="row pt-3">
+        <div class="col text-center">
+          <img class="img-fluid pt-5 pl-3" src="../assets/website/playserver.png" alt="">
         </div>
-        <form class="" action="index.html" method="post">
-          <div class="email px-5 pb-5">
-            <label class="form-label" for="email-input">Email Address</label>
-            <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text">
-            <div class="form-text text-muted" id="email-help-text">
-              <small>We will never share your email</small>
-            </div>
-          </div>
 
-          <div class="password px-5 pb-5">
-            <label class="form-label" for="password-input">Password</label>
-            <input class="form-control" type="password" name="" value="" aria-describedby="password-help-text">
-            <div class="form-text text-muted" id="password-help-text">
-              <div class="form-text text-muted" id="password-help-text">
-                <small>Don't share your password</small>
-              </div>
-            </div>
-          </div>
+        <div class="col">
+          <div class="form">
 
-          <div class="buttons">
-            <div class="row pb-3">
-              <div class="col text-center">
-                <button class="btn btn-primary w-25 form-control" type="submit" name="button">Register</button>
+            <form class="" action="index.html" method="post">
+              <div class="row g-3 pb-5">
+                <div class="col name">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-control" type="text" name="" value="">
+                </div>
+                <div class="col surname">
+                  <label class="form-label" for="surname">Surname</label>
+                  <input class="form-control" type="text" name="" value="">
+                </div>
               </div>
-            </div>
+
+              </div>
+              <div class="email pb-5">
+                <label class="form-label" for="email-input">Email Address</label>
+                <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text" required>
+                <div class="form-text text-muted" id="email-help-text">
+                  <small>We will never share your email</small>
+                </div>
+              </div>
+
+              <div class="password pb-5">
+                <label class="form-label" for="password-input">Password</label>
+                <input class="form-control" type="password" name="" value="" aria-describedby="password-help-text" required>
+                <div class="form-text text-muted" id="password-help-text">
+                  <div class="form-text text-muted" id="password-help-text">
+                    <small>Don't share your password</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <div class="row text-center">
+                  <div class="col pb-3">
+                    <a target="_blank" class="link text-decoration-none" href="login.html">Already an account ?</a>
+                  </div>
+
+                </div>
+                <div class="row pb-3">
+                  <div class="col text-center">
+                    <button class="btn btn-primary w-25 form-control text-decoration-none" type="submit" name="button">Sign Up</button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+
       </div>
+
     </div>
   </body>
 </html>
