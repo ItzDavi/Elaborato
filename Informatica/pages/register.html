@@ -8,34 +8,40 @@
     <link rel="stylesheet" href="../fontawesome/css/all.css">
   </head>
   <body class="bg-dark">
-    <div class="container-fluid">
+    <div class="container-fluid pt-2">
       <a class="navbar-item text-start" href="../index.html"><i class="fas fa-home fa-2x text-white"></i></a>
       <a class="navbar-item text-end" href="#"><i class="fas fa-user fa-2x text-white"></i></a>
     </div>
 
-    <div class="container justify-content-center bg-light rounded w-50 border">
+    <div class="container-fluid justify-content-center rounded w-50 border mt-5 bg-light">
       <div class="form">
         <div class="text-center pt-3 pb-4">
           <h1>Register</h1>
         </div>
         <form class="" action="index.html" method="post">
-          <div class="email">
+          <div class="email px-5 pb-5">
             <label class="form-label" for="email-input">Email Address</label>
             <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text">
-            <div class="form-text" id="email-help-text">
+            <div class="form-text text-muted" id="email-help-text">
               <small>We will never share your email</small>
             </div>
           </div>
 
-          <div class="password">
+          <div class="password px-5 pb-5">
             <label class="form-label" for="password-input">Password</label>
-            <input class="form-control" type="password" name="" value="" aria-describedby="email-help-text">
-            <div class="form-text" id="email-help-text">
-              <small>
-                <ul class="list-unstyled">
-                  <li>Password length must be between 8 and 20 characters</li>
-                </ul>
-              </small>
+            <input class="form-control" type="password" name="" value="" aria-describedby="password-help-text">
+            <div class="form-text text-muted" id="password-help-text">
+              <div class="form-text text-muted" id="password-help-text">
+                <small>Don't share your password</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <div class="row pb-3">
+              <div class="col text-center">
+                <button class="btn btn-primary w-25 form-control" type="submit" name="button">Register</button>
+              </div>
             </div>
           </div>
         </form>
