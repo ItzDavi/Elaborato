@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GSH - Purchase</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+  </head>
+  <body>
+    <div id="bgvideo-div mb-0">
+      <video id="bgvideo" playsinline autoplay muted loop src="../assets/videos/neon.mp4"></video>
+
+      <div class="container-fluid text-white" id="video-text">
+        <h1 id="h1-text" class="mt-5 pt-5">Gaming Server Hosting</h1>
+        <h5 id ="h5-text" class="pb-5 pt-3">Secure, Fast, Easy</h5>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h1 class="text-center pt-5">Purchase</h1>
+    </div>
+
+    <div class="login-btn pb-5 pt-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center">
+            <button class="btn btn-primary w-25 mb-3" type="button" name="button"><a class="text-white text-decoration-none" href="login.html">Login</a></button>
+          </div>
+        </div>
+
+        <div class="row pt-3">
+          <div class="col border-top">
+
+          </div>
+          <div class="col text-center border-top">
+            <small class="text-muted">or continue without login</small>
+          </div>
+          <div class="col border-top">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-details">
+      <div class="container-fluid w-25">
+        <form class="" action="index.html" method="post">
+          <div class="row g-3 pb-5">
+            <div class="col name">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-control" type="text" name="" value="">
+            </div>
+            <div class="col surname">
+              <label class="form-label" for="surname">Surname</label>
+              <input class="form-control" type="text" name="" value="">
+            </div>
+          </div>
+
+          <div class="email pb-5">
+            <label class="form-label" for="email-input">Email Address</label>
+            <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text" required>
+            <div class="form-text text-muted" id="email-help-text">
+              <small>We will never share your email</small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h3 class="text-center">Choose the plan</h3>
+            </div>
+          </div>
+
+          <div class="row pt-3 pb-5">
+            <div class="col text-center">
+              <input type="radio" name="plan" value="premium">
+              <label for="premium"><p class="font-weight-bold">Premium</p></label>
+            </div>
+
+            <div class="col text-center">
+              <input type="radio" name="plan" value="pro">
+                <label for="pro"><p class="font-weight-bold">Pro</p></label>
+            </div>
+
+            <div class="col text-center">
+              <input type="radio" name="plan" value="enterprise">
+              <label for="enterprise"><p class="font-weight-bold">Enterprise</p></label>
+            </div>
+          </div>
+
+          <div class="month-sub">
+            <div class="row">
+              <div class="col">
+                <h3 class="text-center">Month Subscription</h3>
+              </div>
+            </div>
+            <div class="row">
+              <input type="radio" name="plan" value=""><label for="">1 Month</label>
+
+              <input type="radio" name="" value=""><label for="">3 Month</label>
+
+              <input type="radio" name="" value=""><label for="">6 Month</label>
+
+              <input type="radio" name="" value=""><label for="">12 Month</label>
+
+            </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
