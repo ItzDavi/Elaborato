@@ -44,9 +44,9 @@
     </div>
 
     <div class="user-details">
-      <div class="container-fluid w-25">
+      <div class="container-fluid w-50">
         <form class="" action="index.html" method="post">
-          <div class="row g-3 pb-5">
+          <div class="row pb-5">
             <div class="col name">
               <label class="form-label" for="name">Name</label>
               <input class="form-control" type="text" name="" value="">
@@ -57,53 +57,67 @@
             </div>
           </div>
 
-          <div class="email pb-5">
-            <label class="form-label" for="email-input">Email Address</label>
-            <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text" required>
-            <div class="form-text text-muted" id="email-help-text">
-              <small>We will never share your email</small>
-            </div>
-          </div>
-
           <div class="row">
-            <div class="col">
-              <h3 class="text-center">Choose the plan</h3>
-            </div>
-          </div>
-
-          <div class="row pt-3 pb-5">
-            <div class="col text-center">
-              <input type="radio" name="plan" value="premium">
-              <label for="premium"><p class="font-weight-bold">Premium</p></label>
-            </div>
-
-            <div class="col text-center">
-              <input type="radio" name="plan" value="pro">
-                <label for="pro"><p class="font-weight-bold">Pro</p></label>
-            </div>
-
-            <div class="col text-center">
-              <input type="radio" name="plan" value="enterprise">
-              <label for="enterprise"><p class="font-weight-bold">Enterprise</p></label>
-            </div>
-          </div>
-
-          <div class="month-sub">
-            <div class="row">
-              <div class="col">
-                <h3 class="text-center">Month Subscription</h3>
+            <div id="email-input-purchase" class="email pb-5 w-100">
+              <label class="form-label" for="email-input">Email Address</label>
+              <input class="form-control" type="email" name="" value="" aria-describedby="email-help-text" required>
+              <div class="form-text text-muted" id="email-help-text">
+                <small>We will never share your email</small>
               </div>
             </div>
-            <div class="row">
-              <input type="radio" name="plan" value=""><label for="">1 Month</label>
+          </div>
 
-              <input type="radio" name="" value=""><label for="">3 Month</label>
+          <h3 class="text-center pb-5 pt-3 border-top">Configuration</h3>
 
-              <input type="radio" name="" value=""><label for="">6 Month</label>
-
-              <input type="radio" name="" value=""><label for="">12 Month</label>
-
+          <div class="row">
+            <div class="col text-center">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="">Premium</h4>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light">/month</small></h2>
+                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <input class="mt-3" type="radio" name="plan" value="premium">
+                </div>
+              </div>
             </div>
+
+            <div class="col text-center">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="">Pro</h4>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title">$29.99<small class="text-muted fw-light">/month</small></h2>
+                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <input class="mt-3" type="radio" name="plan" value="pro">
+                </div>
+              </div>
+            </div>
+
+            <div class="col text-center">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title">$99.99<small class="text-muted fw-light">/month</small></h2>
+                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <input class="mt-3" type="radio" name="plan" value="enterprise">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row pt-5">
+            <div class="col text-center">
+              <h3>Month Subscription</h3>
+              <input type="range" id="rangeInput" name="rangeInput" min="1" max="12" step="2" value="1" oninput="amount.value=rangeInput.value">
+              <output id="amount" name="amount" for="rangeInput">0</output>
+            </div>
+          </div>
+
         </form>
       </div>
     </div>
