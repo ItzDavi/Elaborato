@@ -30,6 +30,8 @@ if (!$connection) {
     $query = "INSERT INTO USERS (id_user, name, surname, email, user_password) VALUES (NULL, '$userName', '$userSurname', '$userEmail', '$userPassword')";
     $insert = mysqli_query($connection, $query);
 
+    echo("Registration completed successfully");
+
     $_SESSION['email'] = $userEmail;
   }
 }
