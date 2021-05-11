@@ -1,3 +1,27 @@
+<?php
+
+$server = "localhost";
+$database = "gsh";
+$user = "root";
+$dbpassword = "";
+
+$connection = mysqli_connect($server, $user, $dbpassword, $database);
+
+if (!$connection) {
+  echo("Failed to connect to the database");
+  exit();
+}
+
+$checkSlots = "SELECT id_plan, available FROM plans WHERE id_plan = 1";
+
+$resultCheck = mysqli_query($connection, $checkSlots);
+$results = mysqli_fetch_assoc($resultCheck);
+
+if ($results) {
+  //TODO
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -192,7 +216,7 @@
             <td class="text-center text-success"><i class="fas fa-check"></i></td>
             <td class="text-center text-success"><i class="fas fa-check"></i></td>
           </tr>
-          
+
           <tr>
             <th scope="row">VPN</th>
             <td class="text-center text-success"><i class="fas fa-check"></i></td>
@@ -203,5 +227,32 @@
         </tbody>
       </table>
     </div>
+
+    <h3 class="text-center mt-5 pt-3 border-top">Server Availability</h3>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col text-center">
+          <h3>Free</h3>
+          <h5>Slots: <?php $slotsFree ?></h5>
+        </div>
+
+        <div class="col text-center">
+          <h3>Premium</h3>
+          <h5>Slots: <?php $slotsPremium ?></h5>
+        </div>
+
+        <div class="col text-center">
+          <h3>Pro</h3>
+          <h5>Slots: <?php $slotsPro ?></h5>
+        </div>
+
+        <div class="col text-center">
+          <h3>Enterprise</h3>
+          <h5>Slots: <?php $slotsEnterprise ?></h5>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
