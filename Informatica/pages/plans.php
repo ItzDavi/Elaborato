@@ -14,12 +14,13 @@ if (!$connection) {
 
 $checkSlots = "SELECT id_plan, available FROM plans";
 
-$resultCheck = mysqli_query($connection, $checkSlots);
-$results = mysqli_fetch_assoc($resultCheck);
+$result = mysqli_query($connection, $checkSlots);
 
-while ($results) {
-  $slots = $result[]
+$array = array();
+while($row = mysqli_fetch_array($result)){
+   array_push($array, $row["available"]);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -228,28 +229,28 @@ while ($results) {
       </table>
     </div>
 
-    <h3 class="text-center mt-5 pt-3 border-top">Server Availability</h3>
+    <h3 class="text-center mt-5 pt-5 border-top">Server Availability</h3>
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
       <div class="row">
         <div class="col text-center">
           <h3>Free</h3>
-          <h5>Slots: <?php $slotsFree ?></h5>
+          <h5 class="pt-3">Slots: <?php echo $array[0] ?></h5>
         </div>
 
         <div class="col text-center">
           <h3>Premium</h3>
-          <h5>Slots: <?php $slotsPremium ?></h5>
+          <h5 class="pt-3">Slots: <?php echo $array[1] ?></h5>
         </div>
 
         <div class="col text-center">
           <h3>Pro</h3>
-          <h5>Slots: <?php $slotsPro ?></h5>
+          <h5 class="pt-3">Slots: <?php echo $array[2] ?></h5>
         </div>
 
         <div class="col text-center">
           <h3>Enterprise</h3>
-          <h5>Slots: <?php $slotsEnterprise ?></h5>
+          <h5 class="pt-3">Slots: <?php echo $array[3] ?></h5>
         </div>
       </div>
     </div>
