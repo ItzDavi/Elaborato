@@ -12,13 +12,13 @@ if (!$connection) {
   exit();
 }
 
-$checkSlots = "SELECT id_plan, available FROM plans WHERE id_plan = 1";
+$checkSlots = "SELECT id_plan, available FROM plans";
 
 $resultCheck = mysqli_query($connection, $checkSlots);
 $results = mysqli_fetch_assoc($resultCheck);
 
-if ($results) {
-  //TODO
+while ($results) {
+  $slots = $result[]
 }
 ?>
 
@@ -33,7 +33,7 @@ if ($results) {
   </head>
   <body>
     <div id="bgvideo-div mb-0">
-      <video id="bgvideo" playsinline autoplay muted loop src="../assets/videos/neon.mp4"></video>
+      <video id="bgvideo-start" playsinline autoplay muted loop src="../assets/videos/neon.mp4"></video>
 
       <div class="container-fluid text-white" id="video-text">
         <h1 id="h1-text" class="mt-5 pt-5">Gaming Server Hosting</h1>
