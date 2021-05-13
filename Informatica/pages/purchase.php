@@ -45,7 +45,7 @@
 
     <div class="user-details">
       <div class="container-fluid w-50">
-        <form class="" action="order.html" method="post">
+        <form class="" action="order.php" method="post">
           <div class="row pb-5">
             <div class="col name">
               <label class="form-label" for="name">Name</label>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="card-body">
                   <h2 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light">/month</small></h2>
-                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <a target="_blank" href="plans.php" class="card-link">Details</a><br>
                   <input class="mt-3" type="radio" name="plan" value="premium" required>
                 </div>
               </div>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="card-body">
                   <h2 class="card-title pricing-card-title">$29.99<small class="text-muted fw-light">/month</small></h2>
-                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <a target="_blank" href="plans.php" class="card-link">Details</a><br>
                   <input class="mt-3" type="radio" name="plan" value="pro" required>
                 </div>
               </div>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="card-body">
                   <h2 class="card-title pricing-card-title">$99.99<small class="text-muted fw-light">/month</small></h2>
-                  <a target="_blank" href="plans.html" class="card-link">Details</a><br>
+                  <a target="_blank" href="plans.php" class="card-link">Details</a><br>
                   <input class="mt-3" type="radio" name="plan" value="enterprise" required>
                 </div>
               </div>

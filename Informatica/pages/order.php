@@ -60,7 +60,7 @@
 
       <div class="row mb-2 mt-5">
         <div class="col text-center">
-          <button class="btn btn-primary" type="submit" name="button"><a class="text-decoration-none text-white" href="confirm.html">Confirm order</a></button>
+          <button class="btn btn-primary" type="submit" name="button"><a class="text-decoration-none text-white" href="confirm.php">Confirm order</a></button>
         </div>
       </div>
 

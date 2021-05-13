@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $server = "localhost";
 $database = "gsh";
 $user = "root";
@@ -20,6 +22,7 @@ $array = array();
 while($row = mysqli_fetch_array($result)){
    array_push($array, $row["available"]);
 }
+
 
 ?>
 

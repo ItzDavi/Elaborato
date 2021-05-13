@@ -27,4 +27,5 @@ if (!$connection) {
   }
 }
 
+  $_SESSION['email'] = $userEmail;
 ?>
