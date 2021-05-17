@@ -16,9 +16,13 @@ if (!$connection) {
 $planChecked = $_POST["plan"];
 $subscriptionChecked = $_POST["subscription"];
 
+$email = $_SESSION["email"];
+$name = $_SESSION["name"];
+$surname = $_SESSION["surname"];
+
 $planCost = 0;
-$subscriptionMonth = 0;
-$discount = 0;
+$discountPerc = 0;
+$discount;
 
 if ($planChecked == "premium") {
   $planCost = 9.99;
@@ -27,6 +31,21 @@ if ($planChecked == "premium") {
 } else if ($planChecked == "enterprise") {
   $planCost = 99.99;
 }
+
+if ($subscriptionChecked == 1) {
+  $discountPerc = 0;
+} else if ($subscriptionChecked == 3) {
+  $discountPerc = 3;
+} else if ($subscriptionChecked == 6) {
+  $discountPerc = 6;
+} else if ($subscriptionChecked == 12) {
+  $discountPerc = 12;
+}
+
+$subtotal = $planCost * $subscriptionChecked;
+$discount = round($subtotal * $discountPerc / 100, 2);
+$total = round($subtotal - $discount, 2);
+
 
 ?>
 
@@ -56,37 +75,36 @@ if ($planChecked == "premium") {
       <div class="row border rounded mx-3">
         <div class="col text-center">
           <strong class="">Name</strong>
-          <p id="customer-name"></p>
+          <p id="customer-name"><?php print $name; ?></p>
         </div>
         <div class="col text-center">
           <strong>Surname</strong>
-          <p id="customer-surname"></p>
+          <p id="customer-surname"><?php print $surname; ?></p>
         </div>
         <div class="col text-center">
           <strong>Email</strong>
-          <p id="customer-email"></p>
+          <p id="customer-email"><?php print $email; ?></p>
         </div>
       </div>
 
       <div class="row mx-3 border rounded mt-4">
         <div class="col text-center">
           <strong>Plan</strong>
-          <p id="customer-plan"></p>
+          <p id="customer-plan"><?php print $planChecked; ?></p>
         </div>
         <div class="col text-center">
           <strong>Subcription</strong>
-          <p id="customer-subscription"></p>
+          <p id="customer-subscription"><?php print $subscriptionChecked; ?> months</p>
         </div>
         <div class="col text-center">
           <strong>Discount</strong>
-          <p id="customer-discount"></p>
+          <p id="customer-discount">$<?php print $discount; ?></p>
         </div>
       </div>
-
       <div class="row mb-4 mt-5">
         <div class="col text-center">
           <h4>Total</h4>
-          <strong id="order-total">$</strong>
+          <strong id="order-total">$<?php print $total; ?></strong>
         </div>
       </div>
 
