@@ -101,7 +101,7 @@
                     <li class="py-1">Help center Support 24/7</li>
                   </ul>
                   <a target="_blank" href="pages/plans.php" class="card-link">Details</a>
-                  <button class="btn btn-primary w-100 mt-3" type="button" name="button"><a href="pages/register.html" target="_blank" class="text-white text-decoration-none">Get Started</a></button>
+                  <button class="btn btn-primary w-100 mt-3" type="button" name="button"><a href="pages/freeserver.php" target="_blank" class="text-white text-decoration-none">Start Now</a></button>
                 </div>
               </div>
             </div>
