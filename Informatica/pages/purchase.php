@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+$server = "localhost";
+$database = "gsh";
+$user = "root";
+$dbpassword = "";
+
+$connection = mysqli_connect($server, $user, $dbpassword, $database);
+
+if (!$connection) {
+  echo("Failed to connect to the database");
+  exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,50 +42,20 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col text-center">
-            <button class="btn btn-primary w-25 mb-3" type="button" name="button"><a class="text-white text-decoration-none" href="login.html">Login</a></button>
-          </div>
-        </div>
-
-        <div class="row pt-3">
-          <div class="col border-top">
-
-          </div>
-          <div class="col text-center border-top">
-            <small class="text-muted">or continue without login</small>
-          </div>
-          <div class="col border-top">
-
+            <?php
+              if (isset($_SESSION["email"])) {
+                print ('<button class="btn btn-primary w-25 mb-3" type="button" name="button" target="_blank()" hidden><a class="text-white text-decoration-none" href="login.html">Login</a></button>');
+              } else {
+                print ('<button class="btn btn-primary w-25 mb-3" type="button" name="button" target="_blank()"><a class="text-white text-decoration-none" href="login.html">Login</a></button>');
+              }
+             ?>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="user-details">
-      <div class="container-fluid w-50">
-        <form class="" action="order.php" method="post">
-          <div class="row pb-5">
-            <div class="col name">
-              <label class="form-label" for="name">Name</label>
-              <input class="form-control" type="text" name="name" value="" required>
-            </div>
-            <div class="col surname">
-              <label class="form-label" for="surname">Surname</label>
-              <input class="form-control" type="text" name="surname" value="" required>
-            </div>
-          </div>
-
-          <div class="row">
-            <div id="email-input-purchase" class="email pb-5 w-100">
-              <label class="form-label" for="email-input">Email Address</label>
-              <input class="form-control" type="email" name="email" value="" aria-describedby="email-help-text" required>
-              <div class="form-text text-muted" id="email-help-text">
-                <small>We will never share your email</small>
-              </div>
-            </div>
-          </div>
-
+      <form class="" action="order.php" method="post">
           <h3 class="text-center pb-5 pt-3 border-top">Configuration</h3>
-
+        <div class="container">
           <div class="row">
             <div class="col text-center">
               <div class="card">
@@ -78,7 +65,7 @@
                 <div class="card-body">
                   <h2 class="card-title pricing-card-title">$9.99<small class="text-muted fw-light">/month</small></h2>
                   <a target="_blank" href="plans.php" class="card-link">Details</a><br>
-                  <input class="mt-3" type="radio" name="plan" value="premium" required>
+                  <input class="mt-3" type="radio" name="plan" value="premium" required checked>
                 </div>
               </div>
             </div>
@@ -126,7 +113,7 @@
                   <ul class="list-unstyled">
                     <li><small>0% discount</small></li>
                   </ul>
-                  <input class="mt-2" type="radio" name="subscription" value="1" required>
+                  <input class="mt-2" type="radio" name="subscription" value="1" required checked>
                 </div>
               </div>
             </div>
@@ -179,6 +166,8 @@
               <button class="btn btn-primary mb-3 w-25" type="submit" name="button"><a class="text-white text-decoration-none">Order Now</a></button>
             </div>
           </div>
+        </div>
+
 
         </form>
       </div>
