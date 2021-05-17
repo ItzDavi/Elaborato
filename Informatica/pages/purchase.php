@@ -163,8 +163,22 @@ if (!$connection) {
 
           <div class="row mt-3 pt-4 border-top">
             <div class="col text-center">
-              <button class="btn btn-primary mb-3 w-25" type="submit" name="button"><a class="text-white text-decoration-none">Order Now</a></button>
+              <?php
+                if (isset($_SESSION["email"])) {
+                  print '<button class="btn btn-primary mb-3 w-25" type="submit" name="button"><a class="text-white text-decoration-none">Order Now</a></button>';
+                } else {
+                  print '<button class="btn btn-primary mb-3 w-25" type="submit" name="button" disabled><a class="text-white text-decoration-none disabled">Order Now</a></button>';
+                }
+               ?>
             </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <?php
+                if (!isset($_SESSION["email"])) {
+                  print '<small class="text-center">You must login before placing an order !</small>';
+                }
+              ?>
           </div>
         </div>
 
