@@ -32,7 +32,7 @@ if (!$connection) {
 
     echo("Registration completed successfully");
 
-    $_SESSION['email'] = $userEmail;
+    $_SESSION["email"] = $userEmail;
   }
 }
 
