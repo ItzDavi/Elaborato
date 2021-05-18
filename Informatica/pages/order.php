@@ -46,6 +46,7 @@ $subtotal = $planCost * $subscriptionChecked;
 $discount = round($subtotal * $discountPerc / 100, 2);
 $total = round($subtotal - $discount, 2);
 
+$today = date("d.m.y");
 
 ?>
 
