@@ -14,14 +14,30 @@ if (!$connection) {
   exit();
 }
 
-$getDBInformation = "SELECT ";
+$email = $_SESSION["email"];
+$userID = $_SESSION["id_user"];
+$planChecked = $_SESSION["planChecked"];
+$planID;
+$subscriptionChecked = $_SESSION["subscriptionChecked"];
+$today = $_SESSION["today"];
+$discount = $_SESSION["discount"];
+$total = $_SESSION["total"];
+$available = $_SESSION["available"];
 
-$insertOrder = "INSERT INTO orders VALUES (NULL, )";
+if ($planChecked == "premium") {
+  $planID = 2;
+} else if ($planChecked == "pro") {
+  $planID = 3;
+} else if ($planChecked == "enterprise"){
+  $planID = 4;
+}
 
+$insertOrder = "INSERT INTO orders VALUES (NULL, '$userID', '$planID', '$subscriptionChecked', '$discount', '$total', '$today')";
+$insertResult = mysqli_query($connection, $insertOrder);
 
-$planChecked = $_POST["plan"];
+$updateAvailability="UPDATE plans SET available='$available'-1 WHERE id_plan='$planID'";
+$updateResult = mysqli_query($connection, $updateAvailability);
 
-print $planChecked;
 ?>
 
 <!DOCTYPE html>
