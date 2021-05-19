@@ -26,10 +26,13 @@ $discount;
 
 if ($planChecked == "premium") {
   $planCost = 9.99;
+  $planID = 2;
 } else if ($planChecked == "pro") {
   $planCost = 29.99;
+  $planID = 3;
 } else if ($planChecked == "enterprise") {
   $planCost = 99.99;
+  $planID = 4;
 }
 
 if ($subscriptionChecked == 1) {
@@ -48,6 +51,20 @@ $total = round($subtotal - $discount, 2);
 
 $today = date("d.m.y");
 
+$_SESSION["planChecked"] = $planChecked;
+$_SESSION["subscriptionChecked"] = $subscriptionChecked;
+$_SESSION["today"] = $today;
+$_SESSION["discount"] = $discount;
+$_SESSION["total"] = $total;
+
+
+$checkServerAvailable = "SELECT available FROM PLANS WHERE id_plan='$planID'";
+$serverQuery = mysqli_query($connection, $checkServerAvailable);
+$serverResult = mysqli_fetch_array($serverQuery);
+
+
+$_SESSION["available"] = $serverResult["available"];
+
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +78,13 @@ $today = date("d.m.y");
   </head>
   <body class="bg-dark">
     <div class="container bg-light mt-5 pb-3">
+    <form class="" action="confirm.php" method="post">
+
+
       <div class="row">
         <div class="col text-center">
           <h2 class="py-3">Order Summary</h2>
+          <?php print $today ?>
         </div>
       </div>
 
@@ -76,11 +97,11 @@ $today = date("d.m.y");
       <div class="row border rounded mx-3">
         <div class="col text-center">
           <strong class="">Name</strong>
-          <p id="customer-name"><?php print $name; ?></p>
+          <p id="customer-name"><?php print $_SESSION["name"] ?></p>
         </div>
         <div class="col text-center">
           <strong>Surname</strong>
-          <p id="customer-surname"><?php print $surname; ?></p>
+          <p id="customer-surname"><?php print $_SESSION["surname"] ?></p>
         </div>
         <div class="col text-center">
           <strong>Email</strong>
@@ -105,7 +126,7 @@ $today = date("d.m.y");
       <div class="row mb-4 mt-5">
         <div class="col text-center">
           <h4>Total</h4>
-          <strong id="order-total">$<?php print $total; ?></strong>
+          <strong id="order-total">$<?php print $total; ?></strong><br><small>Taxes included</small>
         </div>
       </div>
 
@@ -114,7 +135,7 @@ $today = date("d.m.y");
           <button class="btn btn-primary" type="submit" name="button"><a class="text-decoration-none text-white" href="confirm.php">Confirm order</a></button>
         </div>
       </div>
-
+    </form>
     </div>
   </body>
 </html>
