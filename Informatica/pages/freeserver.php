@@ -1,6 +1,19 @@
 <?php
+session_start();
 
- ?>
+$server = "localhost";
+$database = "gsh";
+$user = "root";
+$dbpassword = "";
+
+$connection = mysqli_connect($server, $user, $dbpassword, $database);
+
+if (!$connection) {
+  echo("Failed to connect to the database");
+  exit();
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,7 +24,9 @@
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <title>GSH - Free</title>
   </head>
-  <body>
-
+  <body class="bg-dark text-white">
+    <h1 class="text-center mt-5 pt-5">Your free server will start soon..</h1>
+    <h4 class="text-center mt-5 pt-5">Free server does NOT require an account</h4>
+    <h6 class="text-center bg-danger">Free servers are time limited to 2 hours per day</h6>
   </body>
 </html>
