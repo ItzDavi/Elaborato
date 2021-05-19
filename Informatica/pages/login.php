@@ -20,17 +20,11 @@ if (!$connection) {
   $checkAccResult = mysqli_query($connection, $checkAccount);
   $user = mysqli_fetch_assoc($checkAccResult);
 
-  $getName = "SELECT name FROM USERS WHERE email='$userEmail'";
-  $getNameResult = mysqli_query($connection, $getName);
-  $userName = mysqli_fetch_assoc($getNameResult);
-
-  $getSurname = "SELECT surname FROM USERS WHERE email='$userEmail'";
-  $getSurnameResult = mysqli_query($connection, $getSurname);
-  $userSurname = mysqli_fetch_assoc($getSurnameResult);
-
-  $_SESSION['name'] = $userName;
-  $_SESSION['surname'] = $userSurname;
+  $_SESSION['name'] = $user["name"];
+  $_SESSION['surname'] = $user["surname"];
+  $_SESSION['id_user'] = $user["id_user"];
   $_SESSION['email'] = $userEmail;
+
 ?>
 
 <!DOCTYPE html>
@@ -48,10 +42,8 @@ if (!$connection) {
         <div class="col text-center">
           <?php
             if ($user) {
-              print '<h1 class="pb-5">Welcome</h1>';
+              print '<h1 class="pb-5">Welcome</h1><br>';
               print $_SESSION["email"];
-              print $_SESSION["name"];
-              print $_SESSION["surname"];
               print '<br><i class="fas fa-home"></i> <a href="../index.php" class="text-white text-decoration-none">Home</a>';
             } else {
             print "Invalid email or password: user not found";
