@@ -33,6 +33,9 @@ if (!$connection) {
     $message = "Registration completed successfully";
 
     $_SESSION["email"] = $userEmail;
+    $_SESSION["name"] = $userName;
+    $_SESSION["name"] = $userSurname;
+    $_SESSION["id_user"] = $user["id_user"];
   }
 }
 
