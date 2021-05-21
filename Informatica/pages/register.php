@@ -25,15 +25,32 @@ if (!$connection) {
   $user = mysqli_fetch_assoc($checkResult);
 
   if ($user) {
-    echo("Email already registered");
+    $message = "Email already registered";
   } else {
     $query = "INSERT INTO USERS (id_user, name, surname, email, user_password) VALUES (NULL, '$userName', '$userSurname', '$userEmail', '$userPassword')";
     $insert = mysqli_query($connection, $query);
 
-    echo("Registration completed successfully");
+    $message = "Registration completed successfully";
 
     $_SESSION["email"] = $userEmail;
   }
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>GSH - Sign Up</title>
+  </head>
+  <body class="bg-dark text-white">
+    <h1 class="text-center mt-5 pt-5">
+      <?php echo $message ?>
+    </h1>
+    <h3 class="text-center"><a href="../index.php" class="text-decoration-none text-center">Home</a></h3>
+  </body>
+</html>
