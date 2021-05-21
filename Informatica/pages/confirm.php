@@ -28,7 +28,7 @@ if ($planChecked == "premium") {
   $planID = 2;
 } else if ($planChecked == "pro") {
   $planID = 3;
-} else if ($planChecked == "enterprise"){
+} else if ($planChecked == "enterprise") {
   $planID = 4;
 }
 
