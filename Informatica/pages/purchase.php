@@ -187,5 +187,29 @@ if (!$connection) {
       </div>
     </div>
 
+    <div class="container-fluid bg-dark text-white">
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="pb-3 pt-3">Useful links</h2>
+        </div>
+      </div>
+      <div class="row fluid pb-2 text-center">
+        <div class="col fluid">
+          <a href="../index.php" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-home fa-2x pb-1"></i><br>Home</a>
+        </div>
+        <div class="col">
+          <a href="plans.php" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-book-open fa-2x pb-1"></i><br>Plans</a>
+        </div>
+        <div class="col">
+          <a href="register.html" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-user-plus fa-2x pb-1"></i><br>Sign Up</a>
+        </div>
+        <div class="col">
+          <a href="login.html" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-user-lock fa-2x pb-1"></i><br>Sign In</a>
+        </div>
+        <div class="col">
+          <a href="freeserver.php" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-kiwi-bird fa-2x pb-1"></i><br>Free</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
