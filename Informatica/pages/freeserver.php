@@ -28,5 +28,8 @@ if (!$connection) {
     <h1 class="text-center mt-5 pt-5">Your free server will start soon..</h1>
     <h4 class="text-center mt-5 pt-5">Free server does NOT require an account</h4>
     <h6 class="text-center bg-danger">Free servers are time limited to 2 hours per day</h6>
+
+    <h6 class="text-center mt-5 pt-5">Looking for something more ?</h6>
+    <h6 class="text-center">See our <a href="plans.php" class="text-decoration-none">plans</a></h6>
   </body>
 </html>
