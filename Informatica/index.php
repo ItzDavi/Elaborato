@@ -1,32 +1,36 @@
 <?php
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>GSH - Gaming Server Hosting</title>
+    <!---->
+    <!--Stylessheets links-->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome/css/all.css">
   </head>
   <body>
+    <!--Initial background video-->
     <div id="bgvideo-div mb-0">
       <video id="bgvideo-start" playsinline autoplay muted loop src="assets/videos/neon.mp4"></video>
-
+      <!--Text over the video-->
       <div class="container-fluid text-white" id="video-text">
         <h1 id="h1-text" class="mt-5 pt-5">Gaming Server Hosting</h1>
         <h5 id ="h5-text" class="pb-5 pt-3">Secure, Fast, Easy</h5>
       </div>
     </div>
-
+    <!--Why do games choose us section-->
     <div id="why" class="why">
       <div class="container-fluid text-center py-5 w-100 mt-0">
         <h1 class="pb-5">Why do gamers choose us ?</h1>
         <div class="row pt-3">
           <div class="col">
             <h4 class="pb-3">Support 24/7</h4>
+            <!--<i>=icon, FONTAWESOME-->
             <i class="fas fa-headset fa-3x pb-2 mt-2"></i>
             <ul class="list-unstyled mt-4">
               <li class="py-2">Phone and Email Support 24/7</li>
@@ -77,7 +81,7 @@
         </div>
       </div>
     </div>
-
+    <!--Plans section-->
     <div id="plans" class="plans">
       <div class="display text-center px-5 pt-5 border-top">
         <h2 class="text-center">Our Plans</h2>
@@ -86,6 +90,8 @@
         <div class="container text-center pt-5 pb-5 mt-3">
           <div class="row pb-5">
             <div class="col pr-4 pt-2">
+              <!--Bootstrap cards-->
+              <!--Free plan card-->
               <div class="card">
                 <div class="card-header">
                   <h4 class="">Free</h4>
@@ -109,6 +115,7 @@
             <div class="col pr-4 pl-4 pt-2">
               <div class="card">
                 <div class="card-header">
+                  <!--Premium plan card-->
                   <h4 class="">Premium</h4>
                 </div>
                 <div class="card-body">
@@ -130,6 +137,7 @@
           <div class="col pr-4 pl-4 pt-2">
             <div class="card">
               <div class="card-header">
+                <!--Pro plan card-->
                 <h4 class="">Pro</h4>
               </div>
               <div class="card-body">
@@ -151,6 +159,7 @@
           <div class="col pl-4 pt-2">
             <div class="card">
               <div class="card-header">
+                <!--Enterprise plan card-->
                 <h4 class="">Enterprise</h4>
               </div>
               <div class="card-body">
@@ -178,14 +187,18 @@
     </div>
 
     <div id="supported-games" class="supported-games">
+      <!--Border-->
       <div class="display text-center pt-5 border-top">
       </div>
 
+      <!--Supported games section-->
       <h2 class="text-center pb-5">Supported Games</h2>
       <div class="container-fluid games-supported">
         <div class="row py-2">
+          <!--Fluid image-->
           <img class="img-fluid rounded float-start w-50 h-25 mx-5 py-5" src="assets/website/fortnite.jpg" alt="Fortnite">
           <div class="col">
+            <!--Game details-->
             <h3 class="text-center pt-5 mb-5">Fortnite</h3>
             <ul class="list-unstyled text-center">
               <li class="py-3">Play instantly with your friends</li>
@@ -234,12 +247,14 @@
       </div>
     </div>
 
+    <!--Footer Navbar-->
     <div class="container-fluid bg-dark text-white">
       <div class="row">
         <div class="col text-center">
           <h2 class="pb-3 pt-3">Useful links</h2>
         </div>
       </div>
+      <!--Links-->
       <div class="row fluid pb-2 text-center">
         <div class="col fluid">
           <a href="index.php" class="text-decoration-none text-light font-weight-bold"><i class="fas fa-home fa-2x pb-1"></i><br>Home</a>
