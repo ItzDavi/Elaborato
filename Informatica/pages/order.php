@@ -1,29 +1,38 @@
 <?php
+
+//Start session
 session_start();
 
+//Database variables
 $server = "localhost";
 $database = "gsh";
 $user = "root";
 $dbpassword = "";
 
+//Database connection
 $connection = mysqli_connect($server, $user, $dbpassword, $database);
 
+//Database connection check
 if (!$connection) {
   echo("Failed to connect to the database");
   exit();
 }
 
+//Get plan and month subscription using $_POST
 $planChecked = $_POST["plan"];
 $subscriptionChecked = $_POST["subscription"];
 
+//Assigning values to variables from $_SESSION
 $email = $_SESSION["email"];
 $name = $_SESSION["name"];
 $surname = $_SESSION["surname"];
 
+//Initializing variables
 $planCost = 0;
 $discountPerc = 0;
 $discount;
 
+//Assigning variables values based on the plan checked
 if ($planChecked == "premium") {
   $planCost = 9.99;
   $planID = 2;
@@ -35,6 +44,7 @@ if ($planChecked == "premium") {
   $planID = 4;
 }
 
+//Assigning discount variable value based on the month subscription checked
 if ($subscriptionChecked == 1) {
   $discountPerc = 0;
 } else if ($subscriptionChecked == 3) {
@@ -45,24 +55,32 @@ if ($subscriptionChecked == 1) {
   $discountPerc = 12;
 }
 
+//Subtotal
 $subtotal = $planCost * $subscriptionChecked;
+//Calculatin discount based on subtotal and rounding it
 $discount = round($subtotal * $discountPerc / 100, 2);
+//Calculating total and rounding it
 $total = round($subtotal - $discount, 2);
 
+//Get current date
 $today = date("d.m.y");
 
+//Assigning $_SESSION values form variables
 $_SESSION["planChecked"] = $planChecked;
 $_SESSION["subscriptionChecked"] = $subscriptionChecked;
 $_SESSION["today"] = $today;
 $_SESSION["discount"] = $discount;
 $_SESSION["total"] = $total;
 
-
+//Select availability from database
+//Availability SQL code
 $checkServerAvailable = "SELECT available FROM PLANS WHERE id_plan='$planID'";
+//Run availability SQL query
 $serverQuery = mysqli_query($connection, $checkServerAvailable);
+//Get query result and assigning it to a variable
 $serverResult = mysqli_fetch_array($serverQuery);
 
-
+//Assigning $_SESSION the availability
 $_SESSION["available"] = $serverResult["available"];
 
 ?>
