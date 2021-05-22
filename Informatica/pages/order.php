@@ -31,6 +31,7 @@ $surname = $_SESSION["surname"];
 $planCost = 0;
 $discountPerc = 0;
 $discount;
+$today = 0;
 
 //Assigning variables values based on the plan checked
 if ($planChecked == "premium") {
