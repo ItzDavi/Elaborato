@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>GSH - Sign Up</title>
+    <!--CSS links-->
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
@@ -18,13 +19,15 @@
 
         <div class="col">
           <div class="form">
-
+            <!--Registration form-->
             <form class="" action="register.php" method="post">
               <div class="row g-3 pb-3">
                 <div class="col name">
+                  <!--Name input-->
                   <label class="form-label" for="name">Name</label>
                   <input class="form-control" type="text" name="user-name" value="" required>
                 </div>
+                <!--Surname input-->
                 <div class="col surname">
                   <label class="form-label" for="surname">Surname</label>
                   <input class="form-control" type="text" name="user-surname" value="" required>
@@ -33,6 +36,7 @@
 
               </div>
               <div class="email pb-3">
+                <!--Email input-->
                 <label class="form-label" for="email-input">Email Address</label>
                 <input class="form-control" type="email" name="user-email" value="" aria-describedby="email-help-text" required>
                 <div class="form-text text-muted" id="email-help-text">
@@ -41,6 +45,7 @@
               </div>
 
               <div class="password pb-3">
+                <!--Password input-->
                 <label class="form-label" for="password-input">Password</label>
                 <input class="form-control" type="password" name="user-password" value="" aria-describedby="password-help-text" required>
                 <div class="form-text text-muted" id="password-help-text">
@@ -50,14 +55,18 @@
                 </div>
               </div>
 
-              <div class="buttons">
+              <small>By continuing the registration, you accept our ToS and the Privacy Policy (GDPR)</small>
+
+              <div class="buttons mt-3">
                 <div class="row text-center">
                   <div class="col pb-2">
+                    <!--Login link-->
                     <a target="_blank" class="link text-decoration-none" href="login.html">Already an account ?</a>
                   </div>
 
                 </div>
                 <div class="row pb-3">
+                  <!--REgister button-->
                   <div class="col text-center">
                     <button class="btn btn-primary w-25 form-control text-decoration-none" type="submit" name="register-btn">Sign Up</button>
                   </div>
