@@ -1,13 +1,18 @@
 <?php
+
+//Session start
 session_start();
 
+//Database variabels
 $server = "localhost";
 $database = "gsh";
 $user = "root";
 $dbpassword = "";
 
+//Database connection
 $connection = mysqli_connect($server, $user, $dbpassword, $database);
 
+//Database connection check
 if (!$connection) {
   echo("Failed to connect to the database");
   exit();
@@ -43,6 +48,8 @@ if (!$connection) {
         <div class="row">
           <div class="col text-center">
             <?php
+            //Get email from $_SESSION
+            //Show login button if NULL
               if (isset($_SESSION["email"])) {
                 print ('<button class="btn btn-primary w-25 mb-3" type="button" name="button" target="_blank()" hidden><a class="text-white text-decoration-none" href="login.html">Login</a></button>');
               } else {
@@ -164,6 +171,8 @@ if (!$connection) {
           <div class="row mt-3 pt-4 border-top">
             <div class="col text-center">
               <?php
+              //Get email from $_SESSION
+              //If is NULL, disable Order Now button
                 if (isset($_SESSION["email"])) {
                   print '<button class="btn btn-primary mb-3 w-25" type="submit" name="button"><a class="text-white text-decoration-none">Order Now</a></button>';
                 } else {
@@ -175,6 +184,8 @@ if (!$connection) {
           <div class="row">
             <div class="col text-center">
               <?php
+              //Get email from $_SESSION
+              //If is NULL, show a message
                 if (!isset($_SESSION["email"])) {
                   print '<small class="text-center">You must login before placing an order !</small>';
                 }
@@ -187,6 +198,7 @@ if (!$connection) {
       </div>
     </div>
 
+    <!--Footer/navbar-->
     <div class="container-fluid bg-dark text-white">
       <div class="row">
         <div class="col text-center">
