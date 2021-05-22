@@ -1,28 +1,37 @@
 <?php
 
+//Start session
 session_start();
 
+//Database variables
 $server = "localhost";
 $database = "gsh";
 $user = "root";
 $dbpassword = "";
 
+//Database connection
 $connection = mysqli_connect($server, $user, $dbpassword, $database);
 
+//Databse connection check
 if (!$connection) {
   echo("Failed to connect to the database");
   exit();
 }
 
+//Get plans availability from the Database
+//Availability SQL code
 $checkSlots = "SELECT id_plan, available FROM plans";
 
+//Run availabilioty SQL query
 $result = mysqli_query($connection, $checkSlots);
 
+//Creating an array to show later availability
 $array = array();
+//Iterating all query result
 while($row = mysqli_fetch_array($result)){
+  //Pushing query results into an array
    array_push($array, $row["available"]);
 }
-
 
 ?>
 
@@ -31,14 +40,17 @@ while($row = mysqli_fetch_array($result)){
   <head>
     <meta charset="utf-8">
     <title>GSH - Plans</title>
+    <!--CSS links-->
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
   </head>
   <body>
+    <!--Background video-->
     <div id="bgvideo-div mb-0">
       <video id="bgvideo-start" playsinline autoplay muted loop src="../assets/videos/neon.mp4"></video>
 
+      <!--Text over the video-->
       <div class="container-fluid text-white" id="video-text">
         <h1 id="h1-text" class="mt-5 pt-5">Gaming Server Hosting</h1>
         <h5 id ="h5-text" class="pb-5 pt-3">Secure, Fast, Easy</h5>
@@ -48,11 +60,14 @@ while($row = mysqli_fetch_array($result)){
     <div class="container-fluid">
       <h1 class="text-center py-5">Our Plans</h1>
     </div>
-
+    <!--Plans details table-->
     <div class="container border rounded mb-5">
       <table class="table table-hover">
+        <!--Table head-->
         <thead>
+          <!--Table row-->
           <tr>
+            <!--Table headers-->
             <th scope="col">Features</th>
             <th class="text-center" scope="col">Free</th>
             <th class="text-center" scope="col">Premium</th>
@@ -60,6 +75,7 @@ while($row = mysqli_fetch_array($result)){
             <th class="text-center" scope="col">Enterprise</th>
           </tr>
         </thead>
+        <!--Table body-->
         <tbody class="">
           <tr class="">
             <th scope="row" class="text-center">GENERALS</th>
@@ -71,6 +87,7 @@ while($row = mysqli_fetch_array($result)){
 
           <tr class="">
             <th scope="row">Time Limit</th>
+            <!--Table data-->
             <td class="text-center text-success"><i class="fas fa-check"></i></td>
             <td class="text-center text-danger"><i class="fas fa-times"></i></td>
             <td class="text-center text-danger"><i class="fas fa-times"></i></td>
@@ -238,6 +255,7 @@ while($row = mysqli_fetch_array($result)){
       <div class="row">
         <div class="col text-center">
           <h3>Free</h3>
+          <!--Print server availability using an array and a hardcoded index-->
           <h5 class="pt-3">Slots: <?php echo $array[0] ?></h5>
         </div>
 
@@ -258,6 +276,7 @@ while($row = mysqli_fetch_array($result)){
       </div>
     </div>
 
+    <!--Footer/navbar-->
     <div class="container-fluid bg-dark text-white">
       <div class="row">
         <div class="col text-center">
