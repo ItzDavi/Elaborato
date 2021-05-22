@@ -1,3 +1,5 @@
+/*Handwrote css file*/
+/*General video css*/
 #bgvideo-start-div {
   width: 100%;
   max-width: 100%;
@@ -6,10 +8,12 @@
   position: relative;
 }
 
+/*Video css*/
 #bgvideo-start {
   width: 100%;
 }
 
+/*Video text css*/
 #video-text {
   position: absolute;
   top: 20%;
@@ -23,6 +27,7 @@
   max-height: 25%;
 }
 
+/*Navbar css*/
 #navbar {
   position: absolute;
   width: 100%;
@@ -30,6 +35,7 @@
   flex-direction: column;
 }
 
+/*Link font css*/
 #home-link {
   font-family: "Lucida Console";
 }
@@ -56,11 +62,13 @@
   align-items: center;
 }*/
 
+/*Email input css*/
 #email-input-purchase {
   width: 100%;
   max-width: 100%;
 }
 
+/*Month subcsription css*/
 #month-range-input {
   width: 50%;
 }
