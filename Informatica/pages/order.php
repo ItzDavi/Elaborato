@@ -134,7 +134,7 @@ $_SESSION["available"] = $serverResult["available"];
           <p id="customer-plan"><?php print $planChecked; ?></p>
         </div>
         <div class="col text-center">
-          <strong>Subcription</strong>
+          <strong>Subscription</strong>
           <p id="customer-subscription"><?php print $subscriptionChecked; ?> months</p>
         </div>
         <div class="col text-center">
