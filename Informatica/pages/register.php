@@ -25,7 +25,7 @@ if (!$connection) {
 
   //Check if email is already registred
   //Email check SQL code
-  $checkEmail = "SELECT * FROM USERS WHERE email='$userEmail' LIMIT 1";\
+  $checkEmail = "SELECT * FROM USERS WHERE email='$userEmail' LIMIT 1";
   //Run email SQL query
   $checkResult = mysqli_query($connection, $checkEmail);
   //Fetch an array with resulting datas
