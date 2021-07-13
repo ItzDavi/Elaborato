@@ -1,4 +1,4 @@
 # Elaborato
 
 
-Private school project
+School project
